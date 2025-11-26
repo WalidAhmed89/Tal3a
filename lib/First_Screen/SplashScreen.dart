@@ -20,7 +20,7 @@ class _splashscreenState extends State<splashscreen> {
       Duration(milliseconds: 4000),
           () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => onBoardScreen()),
+        MaterialPageRoute(builder: (context) => OnBoardScreen()),
       ),
     );
   }
