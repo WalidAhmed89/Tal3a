@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:tal3a/First_Screen/test.dart';
 
 import 'onBoardScreen.dart';
 
@@ -42,7 +41,7 @@ class _splashscreenState extends State<splashscreen> {
             const SizedBox(height: 200),
             Center(
               child: Image.asset(
-                "assets/images/tal3a.png",
+                "assets/Tal3a.png",
                 fit: BoxFit.contain,
               ),
             ),
