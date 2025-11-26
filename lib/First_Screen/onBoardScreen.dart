@@ -15,19 +15,19 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
   // ================= PAGE DATA =================
   final List<Map<String, String>> pages = [
     {
-      "image": "assets/Traveling1.png", // ← حط هنا صورة الصفحة الأولى
+      "image": "assets/Traveling1.png",
       "text":
       "Discover your country in a new way! Get ready for an enjoyable tourist experience within your country with ease",
       "btn": "NEXT"
     },
     {
-      "image": "assets/Traveling2.png", // ← صورة الصفحة الثانية
+      "image": "assets/Traveling2.png",
       "text":
       "Choose according to your budget. The app helps you choose the right places and trips for your budget and time",
       "btn": "NEXT"
     },
     {
-      "image": "assets/Traveling3.png", // ← صورة الصفحة الثالثة
+      "image": "assets/Traveling3.png",
       "text":
       "Everything you need in one place from organizing the trip to suggesting activities and services everything is at your fingertips!",
       "btn": "FINISH"
@@ -52,7 +52,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
           children: [
             const SizedBox(height: 50),
 
-            // ============ TOP LOGO ============
+
             SizedBox(
               height: 120,
               child: Image.asset(
@@ -63,7 +63,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
 
             const SizedBox(height: 20),
 
-            // ============ PAGES ============
+
             Expanded(
               child: PageView.builder(
                 controller: controller,
@@ -76,7 +76,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                 itemBuilder: (context, index) {
                   return Column(
                     children: [
-                      // ----- MAIN IMAGE -----
+
                       SizedBox(
                         height: 300,
                         child: Image.asset(
@@ -87,7 +87,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
 
                       const SizedBox(height: 40),
 
-                      // ----- TEXT -----
+
                       Text(
                         pages[index]["text"]!,
                         textAlign: TextAlign.center,
@@ -105,7 +105,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
               ),
             ),
 
-            // ============ INDICATORS ============
+
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: List.generate(
@@ -127,7 +127,6 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
 
             const SizedBox(height: 20),
 
-            // ============ BUTTON ============
             SizedBox(
               width: double.infinity,
               height: 55,
