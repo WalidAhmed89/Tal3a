@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:tal3a/First_Screen/test.dart';
 
+import 'onBoardScreen.dart';
+
 class splashscreen extends StatefulWidget {
   const splashscreen({super.key});
 
@@ -19,7 +21,7 @@ class _splashscreenState extends State<splashscreen> {
       Duration(milliseconds: 4000),
           () => Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => test()),
+        MaterialPageRoute(builder: (context) => onBoardScreen()),
       ),
     );
   }
