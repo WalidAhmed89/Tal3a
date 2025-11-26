@@ -24,6 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.white,
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios,
@@ -280,7 +281,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Text(
-                ' Or login with',
+                ' Or login with ',
                 style: GoogleFonts.inder(
                   fontSize: 14,
                   color: Colors.black,
@@ -346,7 +347,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const creatacount(),
+                      builder: (context) => const CreateAccountScreen(),
                     ),
                   );
                 },
