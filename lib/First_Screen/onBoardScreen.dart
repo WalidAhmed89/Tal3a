@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../sconedscreens/login.dart';
+
 class OnBoardScreen extends StatefulWidget {
   const OnBoardScreen({super.key});
 
@@ -37,6 +39,19 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color(0xFF00A2FF),
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+            size: 20,
+          ),
+          onPressed: () {
+            Navigator.pop(context); // الرجوع للصفحة السابقة
+          },
+        ),
+      ),
       body: Container(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: const BoxDecoration(
@@ -142,7 +157,12 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
                 onPressed: () {
                   if (current == pages.length - 1) {
                     // FINISH
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ),
+                    );
                   } else {
                     controller.nextPage(
                         duration: const Duration(milliseconds: 400),

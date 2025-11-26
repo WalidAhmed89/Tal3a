@@ -1,27 +1,32 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:tal3a/First_Screen/onBoardScreen.dart';
 
-import 'onBoardScreen.dart';
-
-class splashscreen extends StatefulWidget {
-  const splashscreen({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<splashscreen> createState() => _splashscreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _splashscreenState extends State<splashscreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+
+    // الانتقال للصفحة التالية بعد 3 ثواني
     Timer(
-      Duration(milliseconds: 4000),
-          () => Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => OnBoardScreen()),
-      ),
+      const Duration(milliseconds: 3000),
+          () {
+        if (mounted) {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const OnBoardScreen(),
+            ),
+          );
+        }
+      },
     );
   }
 
@@ -29,26 +34,36 @@ class _splashscreenState extends State<splashscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
             colors: [Color(0xFF00A2FF), Color(0xFF0B70AA)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
         ),
-        child: Column(
-          children: [
-            const SizedBox(height: 200),
-            Center(
-              child: Image.asset(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // ============ LOGO ============
+              Image.asset(
                 "assets/Tal3a.png",
+                width: 250,
+                height: 250,
                 fit: BoxFit.contain,
               ),
-            ),
 
-            // باقي الصفحة
-            Expanded(child: Container()),
-          ],
+              const SizedBox(height: 40),
+
+              // ============ LOADING INDICATOR ============
+              const CircularProgressIndicator(
+                color: Colors.white,
+                strokeWidth: 3,
+              ),
+            ],
+          ),
         ),
       ),
     );
