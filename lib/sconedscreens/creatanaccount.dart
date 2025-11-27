@@ -13,7 +13,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   bool rememberMe = false;
   bool obscurePassword = true;
   bool obscureConfirmPassword = true;
-  String selectedDate = '22/08/1997';
+  String selectedDate = '00/00/0000';
 
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
@@ -272,7 +272,12 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                     elevation: 0,
                   ),
                   onPressed: () {
-                    // Handle create account
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginScreen(),
+                      ),
+                    );
                   },
                   child: Text(
                     'Create Account',
