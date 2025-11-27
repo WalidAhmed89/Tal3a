@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
     // الانتقال للصفحة التالية بعد 3 ثواني
     Timer(
-      const Duration(milliseconds: 3000),
+      const Duration(milliseconds: 4000),
           () {
         if (mounted) {
           Navigator.pushReplacement(
@@ -59,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
               // ============ LOADING INDICATOR ============
               const CircularProgressIndicator(
-                color: Colors.white,
+                color: Colors.black,
                 strokeWidth: 3,
               ),
             ],

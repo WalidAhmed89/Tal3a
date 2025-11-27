@@ -50,124 +50,123 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
         ),
 
         // PAGE CONTENT
-        child: Column(
-          children: [
-            const SizedBox(height: 50),
+        child: SafeArea(
+          child: Column(
+            children: [
+              const SizedBox(height: 30),
 
-
-            SizedBox(
-              height: 120,
-              child: Image.asset(
-                "assets/Tal3a.png", // ← لوجو التطبيق
-                fit: BoxFit.contain,
-              ),
-            ),
-
-            const SizedBox(height: 20),
-
-
-            Expanded(
-              child: PageView.builder(
-                controller: controller,
-                itemCount: pages.length,
-                onPageChanged: (index) {
-                  setState(() {
-                    current = index;
-                  });
-                },
-                itemBuilder: (context, index) {
-                  return Column(
-                    children: [
-
-                      SizedBox(
-                        height: 300,
-                        child: Image.asset(
-                          pages[index]["image"]!,
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-
-                      const SizedBox(height: 40),
-
-
-                      Text(
-                        pages[index]["text"]!,
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.inter(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18,
-                        ),
-                      ),
-
-                      const SizedBox(height: 50),
-                    ],
-                  );
-                },
-              ),
-            ),
-
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(
-                pages.length,
-                    (index) => AnimatedContainer(
-                  duration: const Duration(milliseconds: 250),
-                  margin: const EdgeInsets.symmetric(horizontal: 5),
-                  height: 8,
-                  width: current == index ? 25 : 10,
-                  decoration: BoxDecoration(
-                    color: current == index
-                        ? Colors.white
-                        : Colors.white.withOpacity(0.4),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
+              SizedBox(
+                height: 100,
+                child: Image.asset(
+                  "assets/Tal3a.png",
+                  fit: BoxFit.contain,
                 ),
               ),
-            ),
 
-            const SizedBox(height: 20),
+              const SizedBox(height: 20),
 
-            SizedBox(
-              width: double.infinity,
-              height: 55,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: const Color(0xFF0B70AA),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  elevation: 0,
-                ),
-                onPressed: () {
-                  if (current == pages.length - 1) {
-                    // FINISH
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginScreen(),
-                      ),
+              Expanded(
+                child: PageView.builder(
+                  controller: controller,
+                  itemCount: pages.length,
+                  onPageChanged: (index) {
+                    setState(() {
+                      current = index;
+                    });
+                  },
+                  itemBuilder: (context, index) {
+                    return Column(
+                      children: [
+                        Flexible(
+                          child: Image.asset(
+                            pages[index]["image"]!,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+
+                        const SizedBox(height: 30),
+
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            pages[index]["text"]!,
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.inter(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(height: 30),
+                      ],
                     );
-                  } else {
-                    controller.nextPage(
-                        duration: const Duration(milliseconds: 400),
-                        curve: Curves.easeInOut);
-                  }
-                },
-                child: Text(
-                  pages[current]["btn"]!,
-                  style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                  },
+                ),
+              ),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  pages.length,
+                      (index) => AnimatedContainer(
+                    duration: const Duration(milliseconds: 250),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
+                    height: 8,
+                    width: current == index ? 25 : 10,
+                    decoration: BoxDecoration(
+                      color: current == index
+                          ? Colors.white
+                          : Colors.white.withOpacity(0.4),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
                   ),
                 ),
               ),
-            ),
 
-            const SizedBox(height: 30),
-          ],
+              const SizedBox(height: 20),
+
+              SizedBox(
+                width: double.infinity,
+                height: 55,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    foregroundColor: const Color(0xFF0B70AA),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    elevation: 0,
+                  ),
+                  onPressed: () {
+                    if (current == pages.length - 1) {
+                      // FINISH
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const LoginScreen(),
+                        ),
+                      );
+                    } else {
+                      controller.nextPage(
+                          duration: const Duration(milliseconds: 400),
+                          curve: Curves.easeInOut);
+                    }
+                  },
+                  child: Text(
+                    pages[current]["btn"]!,
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
     );
