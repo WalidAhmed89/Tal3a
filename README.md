@@ -135,7 +135,7 @@ Users trust visually clean, consistent apps—important for booking & planning.
 
 These insights strongly influenced Tal'ah’s simplicity-focused design.
 
-🛠️ Technology & Integrations
+## 🛠️ Technology & Integrations
 
 Tal’ah will use the following tools:
 
@@ -159,7 +159,7 @@ Weather API
 
 Places API (future expansion)
 
-📅 Project Timeline
+## 📅 Project Timeline
 Stage	Description	Duration
 Research	Interviews, surveys, competitor analysis	1 sprint
 UX Stage	Flow mapping, wireframes	2 sprints
@@ -169,7 +169,7 @@ Prototype	Clickable, ready for investor demo	1 sprint
 
 Once the initial release performs well, Tal’ah will expand with:
 
-🤖 AI Recommendation Engine
+## 🤖 AI Recommendation Engine
 
 Personalized trip plans based on:
 
@@ -181,7 +181,7 @@ interests
 
 time available
 
-👫 Social Travel Features
+## 👫 Social Travel Features
 
 See friends’ trips
 
@@ -189,15 +189,15 @@ Public itineraries
 
 Community photos
 
-🌎 International Destinations
+## 🌎 International Destinations
 
 Start with Egypt → Middle East → Europe.
 
-👤 Team & Roles
+## 👤 Team & Roles
 Name	Role
 Mohaned Weal	Stakeholder / Owner
 Yossef Mohamed	UX/UI Designer
 Dev team	(To be added)
-🧩 Final Notes
+## 🧩 Final Notes
 
 Tal’ah is a user-first travel platform designed to evolve into a full ecosystem of smart trip planning, social sharing, and AI-powered exploration.
