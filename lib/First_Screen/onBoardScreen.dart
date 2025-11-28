@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tal3a/AuthenticationScreens/login.dart';
 
-import '../sconedscreens/login.dart';
+import '../AuthenticationScreens/login.dart';
 
 class OnBoardScreen extends StatefulWidget {
   const OnBoardScreen({super.key});

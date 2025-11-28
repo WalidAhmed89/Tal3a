@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../Homescreens/fristscreen.dart';
+import '../../Homescreens/HomeScreen.dart';
 import 'creatanaccount.dart';
 import 'forgetpassword.dart';
 
@@ -235,7 +235,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const fristscreen(),
+                        builder: (context) => HomeScreen(),
                       ),
                     );
                   },
@@ -305,6 +305,7 @@ class _LoginScreenState extends State<LoginScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
                   // Apple
                   _buildSocialButton(
                     imagePath: "assets/apple.png",
