@@ -40,6 +40,7 @@ class _OnBoardScreenState extends State<OnBoardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+
         padding: const EdgeInsets.symmetric(horizontal: 20),
         decoration: const BoxDecoration(
           gradient: LinearGradient(

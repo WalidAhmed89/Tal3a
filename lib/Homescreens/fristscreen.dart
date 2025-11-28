@@ -13,7 +13,7 @@ class fristscreen extends StatelessWidget {
             size: 20,
           ),
           onPressed: () {
-            Navigator.pop(context); // الرجوع للصفحة السابقة
+            Navigator.pop(context);
           },
         ),
       ),

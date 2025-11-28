@@ -72,6 +72,9 @@ flutter:
      - assets/Traveling1.png
      - assets/Traveling2.png
      - assets/Traveling3.png
+     - assets/google.png
+     - assets/apple.png
+     - assets/facebook.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

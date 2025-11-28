@@ -319,11 +319,11 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _buildSocialButton(icon: Icons.apple, onTap: () {}),
+                  _buildSocialButton(imagePath: "assets/apple.png", onTap: () {}),
                   const SizedBox(width: 16),
-                  _buildSocialButton(icon: Icons.g_mobiledata_sharp, onTap: () {}),
+                  _buildSocialButton(imagePath: "assets/google.png", onTap: () {}),
                   const SizedBox(width: 16),
-                  _buildSocialButton(icon: Icons.facebook, onTap: () {}),
+                  _buildSocialButton(imagePath: "assets/facebook.png", onTap: () {}),
                 ],
               ),
 
@@ -468,21 +468,25 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
 
   // ============ SOCIAL BUTTON WIDGET ============
   Widget _buildSocialButton({
-    required IconData icon,
+    IconData? icon,
+    String? imagePath,
     required VoidCallback onTap,
   }) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(30),
       child: Container(
-        width: 60,
-        height: 60,
+        width: 70,
+        height: 70,
         decoration: BoxDecoration(
           color: Colors.white,
           shape: BoxShape.circle,
           border: Border.all(color: Colors.grey[300]!, width: 1.5),
         ),
-        child: Icon(icon, size: 28, color: Colors.black),
+        child: Center(
+          child: icon != null
+              ? Icon(icon, size: 32, color: Colors.black)
+              : Image.asset(imagePath!, width: 28, height: 28),
+        ),
       ),
     );
   }
