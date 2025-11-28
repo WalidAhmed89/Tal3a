@@ -1,9 +1,9 @@
-##🧭 Tal'ah — Smart Travel Planner App
+🧭 Tal'ah — Smart Travel Planner App
 
 Tal’ah is a modern mobile application designed to simplify travel planning for young travelers.
 The app provides smart recommendations, automated daily plans, easy customization, and an intuitive map-based experience — all in one place.
 
-##📌 Table of Contents
+📌 Table of Contents
 
 About Tal'ah
 
@@ -25,13 +25,13 @@ Future Expansion
 
 Team & Roles
 
-##🚀 About Tal'ah
+🚀 About Tal'ah
 
 Tal’ah is a travel-planning mobile application built to help users plan complete trips quickly, intelligently, and without getting overwhelmed.
 
 The goal is to combine destinations, schedules, recommendations, maps, and sharing into one clean, fast, youth-focused application.
 
-##🎯 App Goals
+🎯 App Goals
 
 Make travel planning fast, simple, and personalized.
 
