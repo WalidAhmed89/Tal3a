@@ -1,9 +1,9 @@
-🧭 Tal'ah — Smart Travel Planner App
+## 🧭 Tal'ah — Smart Travel Planner App
 
 Tal’ah is a modern mobile application designed to simplify travel planning for young travelers.
 The app provides smart recommendations, automated daily plans, easy customization, and an intuitive map-based experience — all in one place.
 
-📌 Table of Contents
+## 📌 Table of Contents
 
 About Tal'ah
 
@@ -25,13 +25,13 @@ Future Expansion
 
 Team & Roles
 
-🚀 About Tal'ah
+## 🚀 About Tal'ah
 
 Tal’ah is a travel-planning mobile application built to help users plan complete trips quickly, intelligently, and without getting overwhelmed.
 
 The goal is to combine destinations, schedules, recommendations, maps, and sharing into one clean, fast, youth-focused application.
 
-🎯 App Goals
+## 🎯 App Goals
 
 Make travel planning fast, simple, and personalized.
 
@@ -45,11 +45,11 @@ Build a strong base of users (5,000–10,000 early adopters).
 
 Prioritize usability and growth before monetization.
 
-🧩 Design Objectives
+## 🧩 Design Objectives
 
 The design of Tal’ah focuses on creating a seamless, intuitive travel experience that makes planning enjoyable—not stressful.
 
-✔️ Primary Objectives:
+## ✔️ Primary Objectives:
 
 Provide a clean, modern, youth-friendly UI inspired by real travel experiences.
 
@@ -63,7 +63,7 @@ Maintain visual consistency & brand identity tailored to travel inspiration.
 
 Build a design system that is scalable when international expansion begins.
 
-👥 Target Audience
+## 👥 Target Audience
 
 Young travelers aged 18–35, especially:
 
@@ -79,8 +79,8 @@ Tourists visiting Egypt for short stays
 
 These users value speed, simplicity, and smart recommendations.
 
-🧱 Key Features
-🗺️ 1. Smart Destination Input
+## 🧱 Key Features
+## 🗺️ 1. Smart Destination Input
 
 Dropdown-based selection
 
@@ -88,7 +88,7 @@ Auto-suggestions
 
 No need for long typing
 
-📅 2. Auto-Generated Daily Plans
+## 📅 2. Auto-Generated Daily Plans
 
 Algorithm creates a full daily schedule
 
@@ -96,27 +96,27 @@ Based on user preferences
 
 Editable at any time
 
-📍 3. Interactive Map Integration
+## 📍 3. Interactive Map Integration
 
 View all places on Google Maps
 
 See routes and travel time
 
-💾 4. Save & Share
+## 💾 4. Save & Share
 
 Save plans for later
 
 Share trips with friends instantly
 
-🌤️ 5. Live Weather Integration
+## 🌤️ 5. Live Weather Integration
 
 Weather API supports better planning
 
-📱 6. Mobile-First Experience
+## 📱 6. Mobile-First Experience
 
 Faster and more practical than desktop
 
-🔍 User Research Insights
+## 🔍 User Research Insights
 
 To ensure the app meets real traveler needs, interviews and surveys were conducted.
 Here are the key findings:
